@@ -42,7 +42,7 @@ button:hover {
     margin: 20px auto 0px auto;
     padding: 0;
     width: 100vw;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,12 +52,13 @@ button:hover {
 .subcontainer {
     margin: 0 auto;
     padding: 0;
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+    border: 1px solid #0099ff;
 }
 
 .subcontainer p {
