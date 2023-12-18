@@ -1,0 +1,13 @@
+h1 {
+    color: #0099ff;
+}
+
+.big-title {
+    font-size: 10rem;
+    color: #0099ff;
+    font-family: cursive;
+}
+
+.margin-left {
+    margin-left: 20px;
+}
