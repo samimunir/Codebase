@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+body {
+    background: #262626;
+}
+
+h1 {
+    color: #0099ff;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h2 {
+    color: #fff;
+    font-size: 26px;
+}
+
+button {
+    font-size: 18px;
+    padding: 2.5px 5px;
+    outline: none;
+    border: 2px solid #0099ff;
+    background: #262626;
+    color: #0099ff;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    border-color: #fff;
+    color: #fff;
+}
