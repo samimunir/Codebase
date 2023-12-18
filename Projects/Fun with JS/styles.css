@@ -23,17 +23,45 @@ h2 {
 }
 
 button {
+    margin: 20px 0px 0px 0px;
     font-size: 18px;
     padding: 2.5px 5px;
     outline: none;
     border: 2px solid #0099ff;
     background: #262626;
     color: #0099ff;
-    margin-top: 10px;
     transition: all 0.3s ease-in-out;
 }
 
 button:hover {
     border-color: #fff;
     color: #fff;
+}
+
+.container {
+    margin: 20px auto 0px auto;
+    padding: 0;
+    width: 100vw;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subcontainer {
+    margin: 0 auto;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.subcontainer p {
+    color: #0099ff;
+    font-size: 18px;
+    font-weight: 500;
 }
