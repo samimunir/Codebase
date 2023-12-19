@@ -3,3 +3,10 @@ $(document).ready(function() {
 });
 
 $('h1').addClass('big-title margin-left');
+
+$('h1').text('Goodbye');
+
+// .html('');
+
+// $('img').attr('src');
+$('a').attr('href', 'https://www.yahoo.com');
