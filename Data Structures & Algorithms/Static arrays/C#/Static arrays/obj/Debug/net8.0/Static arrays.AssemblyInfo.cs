@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Static arrays")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60136a824c119155aeb60820e6b510d896c30502")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ceb4647d66746c178e92351894eb90b616aa082")]
 [assembly: System.Reflection.AssemblyProductAttribute("Static arrays")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Static arrays")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

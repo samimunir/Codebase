@@ -12,5 +12,7 @@ public class Program {
 
         Static_Array static_array = new Static_Array(4);
         static_array.ToString();
+        static_array.InsertHead(2);
+        static_array.InsertHead(-7);
     }
 }
