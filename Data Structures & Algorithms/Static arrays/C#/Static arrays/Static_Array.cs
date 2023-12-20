@@ -20,7 +20,7 @@ public class Static_Array {
         }
     }
 
-    private Boolean doesExist() {
+    private Boolean DoesExist() {
         if (static_array == null) {
             return false;
         } else {
@@ -28,7 +28,7 @@ public class Static_Array {
         }
     }
 
-    private Boolean isEmpty() {
+    private Boolean IsEmpty() {
         if (front_pointer <= 0) {
             return true;
         } else {
@@ -36,11 +36,33 @@ public class Static_Array {
         }
     }
 
-    private Boolean isFull() {
+    private Boolean IsFull() {
         if (total_elements == max_elements || front_pointer >= max_elements) {
             return true;
         } else {
             return false;
         }
+    }
+
+    private void PrintDSStats() {
+        Console.WriteLine("printDSStats() called...");
+        PrintDS();
+        Console.WriteLine("\tfront_pointer: " + front_pointer);
+        Console.WriteLine("\tback_pointer: " + back_pointer);
+        Console.WriteLine("\ttotal_elements: " + total_elements);
+        Console.WriteLine("\tmax_elements: " + max_elements);
+    }
+
+    private void PrintDS() {
+        string ds_output = "";
+        for (int i = 0; i < max_elements; i++) {
+            ds_output += static_array[i] + " ";
+        }
+        Console.WriteLine("\tstatic_array[]: " + ds_output);
+    }
+
+    public override string ToString() {
+        PrintDSStats();
+        return "";
     }
 }

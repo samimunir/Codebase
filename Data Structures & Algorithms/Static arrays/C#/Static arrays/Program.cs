@@ -11,5 +11,6 @@ public class Program {
         Console.WriteLine("------------------");
 
         Static_Array static_array = new Static_Array(4);
+        static_array.ToString();
     }
 }
