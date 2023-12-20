@@ -9,4 +9,12 @@ $('h1').text('Goodbye');
 // .html('');
 
 // $('img').attr('src');
-$('a').attr('href', 'https://www.yahoo.com');
+// $('a').attr('href', 'https://www.yahoo.com');
+
+$('h1').click(function() {
+    alert('hello');
+});
+
+$('button').click(function() {
+    $('h1').css('color', 'purple');
+});
