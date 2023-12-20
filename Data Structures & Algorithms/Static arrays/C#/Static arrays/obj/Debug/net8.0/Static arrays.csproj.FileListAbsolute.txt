@@ -1,0 +1,15 @@
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/bin/Debug/net8.0/Static arrays
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/bin/Debug/net8.0/Static arrays.deps.json
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/bin/Debug/net8.0/Static arrays.runtimeconfig.json
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/bin/Debug/net8.0/Static arrays.dll
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/bin/Debug/net8.0/Static arrays.pdb
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/obj/Debug/net8.0/Static arrays.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/obj/Debug/net8.0/Static arrays.AssemblyInfoInputs.cache
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/obj/Debug/net8.0/Static arrays.AssemblyInfo.cs
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/obj/Debug/net8.0/Static arrays.csproj.CoreCompileInputs.cache
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/obj/Debug/net8.0/Static arrays.sourcelink.json
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/obj/Debug/net8.0/Static arrays.dll
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/obj/Debug/net8.0/refint/Static arrays.dll
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/obj/Debug/net8.0/Static arrays.pdb
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/obj/Debug/net8.0/Static arrays.genruntimeconfig.cache
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Static arrays/C#/Static arrays/obj/Debug/net8.0/ref/Static arrays.dll
