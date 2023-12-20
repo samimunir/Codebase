@@ -19,4 +19,12 @@ public class Static_Array {
             Console.WriteLine("\nSUCCESS: static_array[] initialized.");
         }
     }
+
+    private Boolean doesExist() {
+        if (static_array == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
