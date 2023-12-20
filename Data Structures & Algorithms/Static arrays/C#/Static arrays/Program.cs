@@ -9,5 +9,7 @@ public class Program {
     public static void Main(string[] args) {
         Console.WriteLine("\nStatic Arrays - C#");
         Console.WriteLine("------------------");
+
+        Static_Array static_array = new Static_Array(4);
     }
 }
