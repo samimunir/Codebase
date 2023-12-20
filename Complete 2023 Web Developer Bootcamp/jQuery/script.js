@@ -18,3 +18,13 @@ $('h1').click(function() {
 $('button').click(function() {
     $('h1').css('color', 'purple');
 });
+
+$('input').keypress(function(event) {
+    console.log(event.key);
+});
+
+$('h1').on('mouseover', function() {
+    $('h1').css('color', '#0099ff');
+});
+
+$('h1').before('<button>New Button</button>');
