@@ -27,4 +27,20 @@ public class Static_Array {
             return true;
         }
     }
+
+    private Boolean isEmpty() {
+        if (front_pointer <= 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private Boolean isFull() {
+        if (total_elements == max_elements || front_pointer >= max_elements) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
