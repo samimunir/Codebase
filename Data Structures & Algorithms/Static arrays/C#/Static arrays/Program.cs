@@ -14,5 +14,8 @@ public class Program {
         static_array.ToString();
         static_array.InsertHead(2);
         static_array.InsertHead(-7);
+        static_array.InsertHead(11);
+        static_array.InsertHead(63);
+        static_array.InsertHead(0); // ERROR RETURN EXPECTED (insert impossible to full-capacity static_array[].)
     }
 }

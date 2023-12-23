@@ -20,38 +20,6 @@ public class Static_Array {
         }
     }
 
-    private Boolean DoesExist() {
-        if (static_array == null) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    private Boolean IsEmpty() {
-        if (front_pointer <= 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private Boolean IsFull() {
-        if (total_elements == max_elements || front_pointer >= max_elements) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private Boolean CanInsert(int pointer) {
-        if (pointer + 1 == max_elements) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
     private void PrintDSStats() {
         // Console.WriteLine("printDSStats() called...");
         PrintDS();
@@ -74,45 +42,43 @@ public class Static_Array {
         return "";
     }
 
-    private int[] ShiftRight(int[] input_array, int pointer) {
-        int[] temp_array = input_array;
-        for (int i = pointer; i > 0; i--) {
-            temp_array[i] = i - 1;
+    private Boolean CanInsert(int front_pointer) {
+        if (front_pointer + 1 == static_array.Length) {
+            return false;
+        } else {
+            return true;
         }
-        Console.WriteLine("pointer: " + pointer);
-        for (int i = 0; i < input_array.Length; i++) {
-            Console.WriteLine(input_array[i]);
+    }
+
+    private int[] ShiftRight(int[] input_array, int front_pointer) {
+        for (int i = front_pointer; i > 0; i--) {
+            input_array[i] = input_array[i - 1];
         }
-        return temp_array;
+        return input_array;
     }
 
     public void InsertHead(int data_element) {
-        Console.WriteLine("\nInsertHead(" + data_element + ") called...");
-        if (!DoesExist()) {
-            max_elements = 3;
-            static_array = new int[max_elements];
-            front_pointer = -1;
-            back_pointer = -1;
-            front_pointer++;
-            back_pointer++;
-            static_array[front_pointer] = data_element;
-            total_elements++;
-        } else if (!IsFull()) {
+        if (CanInsert(front_pointer)) {
+            Console.WriteLine("\nInsertHead(" + data_element + ") called...");
             if (front_pointer == -1) {
                 front_pointer++;
-                back_pointer++;
                 static_array[front_pointer] = data_element;
+                back_pointer++;
+                total_elements++;
+            } else if (front_pointer == 0) {
+                front_pointer++;
+                static_array[front_pointer] = static_array[front_pointer - 1];
+                static_array[back_pointer] = data_element;
                 total_elements++;
             } else {
-                if (CanInsert(front_pointer)) {
-                    front_pointer++;
-                    static_array = ShiftRight(static_array, front_pointer);
-                    static_array[back_pointer] = data_element;
-                    total_elements++;
-                } else {
-                    Console.WriteLine("\n--<ERROR>-- cannot insert into full capacity static_array[].");
-                }
+                front_pointer++;
+                int[] shifted_array = ShiftRight(static_array, front_pointer);
+                shifted_array[back_pointer] = data_element;
+                static_array = shifted_array;
+                total_elements++;
             }
+        } else {
+            Console.WriteLine("\n--<ERROR>-- cannot insert into full capacity static_array[].");
         }
         PrintDSStats();
     }
