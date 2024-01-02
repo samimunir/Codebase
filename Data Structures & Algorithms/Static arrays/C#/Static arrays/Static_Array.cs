@@ -82,4 +82,23 @@ public class Static_Array {
         }
         PrintDSStats();
     }
+
+    public void InsertLast(int data_element) {
+        if (CanInsert(front_pointer)) {
+            Console.WriteLine("\nInsertLast(" + data_element + ") called...");
+            if (front_pointer == -1) {
+                front_pointer++;
+                static_array[front_pointer] = data_element;
+                back_pointer++;
+                total_elements++;
+            } else {
+                front_pointer++;
+                static_array[front_pointer] = data_element;
+                total_elements++;
+            }
+        } else {
+            Console.WriteLine("\n--<ERROR>-- cannot insert into full capacity static_array[].");
+        }
+        PrintDSStats();
+    }
 }
