@@ -32,5 +32,3 @@ Delete resource from server (request from client-side computer to server-side co
 ## Postman
 ## Body Parser (Middleware)
 ## Morgan (Middleware)
-##
-##
