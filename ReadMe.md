@@ -12,6 +12,7 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 * jQuery
 * Node.js
 * Express
+* EJS
 ### 3. Data Structures & Algorithms
 * Static arrays
     * C#
