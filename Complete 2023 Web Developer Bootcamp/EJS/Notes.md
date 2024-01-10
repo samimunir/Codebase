@@ -11,3 +11,5 @@ Allows us to send back a full HTML page (with CSS & JavaScript) from the server.
 Almost like a little JavaScript module that can run JavaScript code inside a HTML file. *(.ejs file extension)*.
 * res.sendFile() is only functional for static files.
 * res.render() allows us to specify which file to render on the screen, and then add a JavaScript object to pass over some properties (key, value pair).
+## Partials
+Allow us to build webpages by reusing HTML pages/components using the EJS *include* statement.
