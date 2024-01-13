@@ -100,21 +100,21 @@ public class Static_Array {
 
     public void RemoveHead() {
         if (CanRemove(front_pointer)) {
-            Console.WriteLine("\nRemoveHead() called...");
+            Console.WriteLine("\nRemoveHead(" + static_array[back_pointer] + ") called...");
             if (front_pointer == 0) {
-                Console.WriteLine("HERE 1.");
+                // Console.WriteLine("HERE 1.");
                 static_array[front_pointer] = 0;
                 front_pointer = -1;
                 back_pointer = -1;
                 total_elements--;
             } else if (front_pointer == 1) {
-                Console.WriteLine("HERE 2.");
+                // Console.WriteLine("HERE 2.");
                 static_array[front_pointer - 1] = static_array[front_pointer];
                 static_array[front_pointer] = 0;
                 front_pointer--;
                 total_elements--;
             } else {
-                Console.WriteLine("HERE 3.");
+                // Console.WriteLine("HERE 3.");
                 int[] shifted_array = ShiftLeft(static_array, front_pointer);
                 shifted_array[front_pointer] = 0;
                 static_array = shifted_array;
@@ -145,4 +145,6 @@ public class Static_Array {
         }
         PrintDSStats();
     }
+
+    public void RemoveLast() {}
 }

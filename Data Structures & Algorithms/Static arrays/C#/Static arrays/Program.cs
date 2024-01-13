@@ -33,5 +33,7 @@ public class Program {
         static_array.RemoveHead();
         static_array.RemoveHead();
         static_array.RemoveHead(); // ERROR RETURN EXPECTED (remove impossible from empty/null static_array[].)
+
+        // testing function RemoveLast()
     }
 }
