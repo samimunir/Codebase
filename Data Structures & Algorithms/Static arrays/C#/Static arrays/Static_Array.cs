@@ -146,5 +146,22 @@ public class Static_Array {
         PrintDSStats();
     }
 
-    public void RemoveLast() {}
+    public void RemoveLast() {
+        if (CanRemove(front_pointer)) {
+            Console.WriteLine("\nRemoveLast(" + static_array[front_pointer] + ") called...");
+            if (front_pointer == 0) {
+                static_array[front_pointer] = 0;
+                front_pointer = -1;
+                back_pointer = -1;
+                total_elements--;
+            } else {
+                static_array[front_pointer] = 0;
+                front_pointer--;
+                total_elements--;
+            }
+        } else {
+            Console.WriteLine("\n--<ERROR>-- cannot remove from empty/null static_array[].");
+        }
+        PrintDSStats();
+    }
 }
