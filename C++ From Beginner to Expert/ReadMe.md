@@ -9,3 +9,4 @@ __1.3 - User Input__
 ### 3. Section 3 - Conditions
 ### 4. Section 4 - Arrays
 ### 5. Section 5 - Loops
+### 6. Section 6 - Functions
