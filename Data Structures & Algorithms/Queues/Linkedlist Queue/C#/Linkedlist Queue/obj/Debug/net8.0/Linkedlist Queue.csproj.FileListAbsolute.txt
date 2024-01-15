@@ -1,0 +1,15 @@
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/bin/Debug/net8.0/Linkedlist Queue
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/bin/Debug/net8.0/Linkedlist Queue.deps.json
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/bin/Debug/net8.0/Linkedlist Queue.runtimeconfig.json
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/bin/Debug/net8.0/Linkedlist Queue.dll
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/bin/Debug/net8.0/Linkedlist Queue.pdb
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/obj/Debug/net8.0/Linkedlist Queue.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/obj/Debug/net8.0/Linkedlist Queue.AssemblyInfoInputs.cache
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/obj/Debug/net8.0/Linkedlist Queue.AssemblyInfo.cs
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/obj/Debug/net8.0/Linkedlist Queue.csproj.CoreCompileInputs.cache
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/obj/Debug/net8.0/Linkedlist Queue.sourcelink.json
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/obj/Debug/net8.0/Linkedlist Queue.dll
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/obj/Debug/net8.0/refint/Linkedlist Queue.dll
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/obj/Debug/net8.0/Linkedlist Queue.pdb
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/obj/Debug/net8.0/Linkedlist Queue.genruntimeconfig.cache
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Queues/Linkedlist Queue/C#/Linkedlist Queue/obj/Debug/net8.0/ref/Linkedlist Queue.dll
