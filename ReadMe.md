@@ -16,6 +16,9 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 ### 3. Data Structures & Algorithms
 * Static arrays
     * C#
+* Linkedlists
+    * Doubly Linkedlist
+        * C#
 * Linkedlist Queue
     * C#
 ### 4. C++ From Beginner to Expert

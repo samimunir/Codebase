@@ -1,0 +1,15 @@
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/bin/Debug/net8.0/Doubly Linkedlist
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/bin/Debug/net8.0/Doubly Linkedlist.deps.json
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/bin/Debug/net8.0/Doubly Linkedlist.runtimeconfig.json
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/bin/Debug/net8.0/Doubly Linkedlist.dll
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/bin/Debug/net8.0/Doubly Linkedlist.pdb
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/obj/Debug/net8.0/Doubly Linkedlist.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/obj/Debug/net8.0/Doubly Linkedlist.AssemblyInfoInputs.cache
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/obj/Debug/net8.0/Doubly Linkedlist.AssemblyInfo.cs
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/obj/Debug/net8.0/Doubly Linkedlist.csproj.CoreCompileInputs.cache
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/obj/Debug/net8.0/Doubly Linkedlist.sourcelink.json
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/obj/Debug/net8.0/Doubly Linkedlist.dll
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/obj/Debug/net8.0/refint/Doubly Linkedlist.dll
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/obj/Debug/net8.0/Doubly Linkedlist.pdb
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/obj/Debug/net8.0/Doubly Linkedlist.genruntimeconfig.cache
+/Users/samimunir/Desktop/samimunir/Codebase/Data Structures & Algorithms/Linkedlists/Doubly Linkedlist/C#/Doubly Linkedlist/obj/Debug/net8.0/ref/Doubly Linkedlist.dll
