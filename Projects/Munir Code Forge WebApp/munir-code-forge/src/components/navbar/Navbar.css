@@ -1,75 +1,12 @@
 .Navbar {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.navbar-logo {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.navbar-logo img {
+.navbar-logo-title img {
     width: 90px;
 }
 
-.navbar-logo h1 {
-    margin-left: 40px;
-    color: #3399ff;
-    text-transform: uppercase;
-    /* text-shadow: 5px 5px 10px; */
-    font-size: 40px;
-    font-weight: 700;
-}
-
-.navbar-list {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-}
-
-.navbar-list a {
-    margin: 0 10px;
-    padding: 2.5px 5px;
-    text-decoration: none;
-    color: #FFF;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 400;
-    transition: all 0.3s ease-in-out;
-}
-
-.navbar-list a:hover {
-    color: #3399ff;
-    text-decoration: overline;
-}
-
-.navbar-connect {
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-connect-btn {
-    margin: 0 40px 0 0;
-    padding: 5px 10px;
-    border: 1px solid #3399ff;
-    outline: none;
-    font-size: 16px;
-    font-weight: 500;
-    background: #262626;
-    color: #3399ff;
-    transition: all 0.3s ease-in-out;
-}
-
-.navbar-connect-btn:hover {
-    background: #3399ff;
+.navbar-logo-title h1 {
     color: #FFF;
 }
