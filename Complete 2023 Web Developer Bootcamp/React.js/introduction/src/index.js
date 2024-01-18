@@ -1,15 +1,10 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
-// import './index.css';
-// import App from './App';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
-
-var React = require('react');
-var ReactDOM = require('react-dom');
-ReactDOM.render(<h1>Hello World</h1>, document.getElementById('root'));
+ReactDOM.render(
+  <div>
+    <h1>Hello JSX & React.js</h1>
+    <p>This is a paragraph...</p>
+  </div>, 
+document.getElementById('root'));
