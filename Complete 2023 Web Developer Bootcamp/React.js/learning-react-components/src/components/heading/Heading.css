@@ -1,0 +1,17 @@
+.Heading {
+    margin: 0;
+    padding: 10px 0;
+    background: #FFF;
+    text-align: center;
+}
+
+.Heading h1 {
+    color: #262626;
+    font-size: 48px;
+}
+
+.Heading h2 {
+    color: #262626;
+    font-size: 24px;
+    margin-top: 10px;
+}

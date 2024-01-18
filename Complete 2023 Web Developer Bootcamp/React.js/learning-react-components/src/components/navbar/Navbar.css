@@ -1,0 +1,28 @@
+.Navbar {
+    margin: 0;
+    padding: 20px 0;
+    background: #262626;
+}
+
+.Navbar-ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Navbar-ul-li {
+    margin: 0 10px;
+    padding: 3px 6px;
+    color: #FFF;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.Navbar-ul-li:hover {
+    background: #FFF;
+    color: #262626;
+}
