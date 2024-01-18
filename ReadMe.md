@@ -22,6 +22,7 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 * Linkedlists
     * Doubly Linkedlist
         * C#
-* Linkedlist Queue
-    * C#
+* Queues
+    * Linkedlist Queue
+        * C#
 ### 4. C++ From Beginner to Expert
