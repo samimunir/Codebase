@@ -4,7 +4,7 @@ function Input(props) {
     return (
         <input
             type={props.type}
-            placeholde={props.placeholder}
+            placeholder={props.placeholder}
         />
     );
 }
