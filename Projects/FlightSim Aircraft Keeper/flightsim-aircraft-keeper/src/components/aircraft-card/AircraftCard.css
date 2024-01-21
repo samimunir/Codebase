@@ -87,4 +87,11 @@
     background-color: #0d0d0d;
     color: #0099ff;
     font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+#aircraft-view-button:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #0099ff;
 }
