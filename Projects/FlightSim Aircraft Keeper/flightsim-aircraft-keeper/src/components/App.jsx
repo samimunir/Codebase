@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './header/Header';
-import AircraftCard from './aircraft-card/AircraftCard';
+import AircraftCardsCon from './aircraft-cards-con/AircraftCardsCon';
 
 function App() {
     return (
         <div className='App'>
             <Header/>
-            <AircraftCard/>
+            <AircraftCardsCon/>
         </div>
     );
 }
