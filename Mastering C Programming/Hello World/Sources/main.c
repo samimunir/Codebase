@@ -8,6 +8,6 @@
 #include <stdlib.h>
 
 int main(int argc, char* argv[]) {
-    printf("\nHello World");
+    printf("Hello World\n");
     return EXIT_SUCCESS;
 }
