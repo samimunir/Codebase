@@ -38,4 +38,5 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 ### Mastering C Programming
 * Hello World
 * Variables
+* User Input
 * Functions
