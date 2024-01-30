@@ -30,3 +30,8 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
     * Linkedlist Queue
         * C#
 ### 4. C++ From Beginner to Expert
+* Hello World
+* Section 1 - Basics
+### Rutgers
+* CS210 - Data Management for Data Science
+    * Homework 1
