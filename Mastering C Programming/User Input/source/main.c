@@ -13,11 +13,12 @@ int main(int argc, char* argv[]) {
     scanf("%d", &age);
     printf("You are %d years old.\n", age);
 
-    char name[20];
+    char firstName[20];
+    char lastName[20];
     printf("\nEnter your name: ");
     // fgets(name, 20, stdin);
-    scanf("%s", name);
-    printf("Your name is: %s\n", name);
+    scanf("%s %s", firstName, lastName);
+    printf("Your name is: %s %s\n", firstName, lastName);
 
     return EXIT_SUCCESS;
 }

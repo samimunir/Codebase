@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
 
     // program constants
     const double PI = 3.145789;
-    printf("\nPI: %f\n", PI);
+    printf("PI: %f\n", PI);
 
     return EXIT_SUCCESS;
 }
