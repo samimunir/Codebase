@@ -40,3 +40,4 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 * Variables
 * User Input
 * Functions
+* Structures
