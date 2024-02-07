@@ -9,5 +9,7 @@
 
 int main(int argc, char* argv[]) {
     printf("Hello World\n");
+    printf("\tWelcome to C Programming!\n");
+    printf("---------------------------------\n");
     return EXIT_SUCCESS;
 }
