@@ -43,3 +43,5 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 * Structures
 * Memory & Addresses
 * Pointers
+* Writing Files
+* Reading Files
