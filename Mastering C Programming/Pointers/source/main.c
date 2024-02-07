@@ -1,6 +1,6 @@
 /*
     Sami Munir
-    February 1st, 2024
+    February 7th, 2024
     Mastering C Programming
     Pointers
     main.c
@@ -9,29 +9,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* void printArray(int input_array[]) {
-    int *lucky_numbers = input_array;
-    printf("\n(2) lucky_numbers[1]: %d\n", lucky_numbers[1]);
-    printf("(2) lucky_numbers[2]: %d\n", lucky_numbers[2]);
-    printf("(2) lucky_numbers[3]: %d\n", lucky_numbers[3]);
-    printf("(2) &lucky_number[1]: %p\n", &lucky_numbers[1]);
-    printf("(2) &lucky_numbers[2]: %p\n", &lucky_numbers[2]);
-    printf("(2) &lucky_numbers[3]: %p\n", &lucky_numbers[3]);
-} */
-
 int main(int argc, char* argv[]) {
     printf("Pointers in C!\n");
 
-    /* int lucky_numbers[] = {2, 11, -7, 556};
-    // printf("\nlucky_numbers[]: \n");
-    printf("\n(1) lucky_numbers[1]: %d\n", lucky_numbers[1]);
-    printf("(1) &lucky_numbers: %p\n", &lucky_numbers);
-    printf("(1) &lucky_number[1]: %p\n", &lucky_numbers[1]);
-    printf("(1) &lucky_numbers[2]: %p\n", &lucky_numbers[2]);
-    printf("(1) &lucky_numbers[3]: %p\n", &lucky_numbers[3]);
-    printArray(lucky_numbers); */
+    int num = 556;
+    printf("num: %d\n", num);
+    printf("address of num: %p\n", &num);
+    int *p_num = &num;
+    printf("\n*p_num = &num\n");
+    printf("p_num: %p\n", p_num);
+    printf("address of p_num: %p\n", &p_num);
 
-    // type code here...
+    /*
+        Pointers are memory addresses.
+        - type of data in our program that is a memory address.
+        - can create a pointer variable and store a pointer within it.
+    */
     
+    double GPA = 3.2;
+    char name[20] = "Sami M";
+    printf("\nname: %s\n", name);
+    printf("address of name: %p\n", &name);
+
     return EXIT_SUCCESS;
 }
