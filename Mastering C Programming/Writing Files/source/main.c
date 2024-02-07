@@ -15,5 +15,9 @@ int main(int argc, char* argv[]) {
     fprintf(p_file, "John Doe | Salesman\nMary Smith | Receptionist\nBobby Wane | Advisor");
     fclose(p_file);
 
+    FILE *p_file_2 = fopen("employees.txt", "a");
+    fprintf(p_file_2, "\nKelly Hall | Receptionist");
+    fclose(p_file_2);
+
     return EXIT_SUCCESS;
 }

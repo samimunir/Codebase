@@ -1,3 +1,4 @@
 John Doe | Salesman
 Mary Smith | Receptionist
 Bobby Wane | Advisor
+Kelly Hall | Receptionist
