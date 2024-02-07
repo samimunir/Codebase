@@ -41,3 +41,4 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 * User Input
 * Functions
 * Structures
+* Memory & Addresses
