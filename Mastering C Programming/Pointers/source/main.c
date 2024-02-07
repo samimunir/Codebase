@@ -31,5 +31,10 @@ int main(int argc, char* argv[]) {
     printf("\nname: %s\n", name);
     printf("address of name: %p\n", &name);
 
+    int age = 22;
+    int *p_age = &age;
+    printf("\np_age: %p\n", p_age);
+    printf("deref. p_age: %d\n", *p_age);
+
     return EXIT_SUCCESS;
 }
