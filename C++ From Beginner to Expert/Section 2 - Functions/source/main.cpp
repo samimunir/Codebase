@@ -19,6 +19,25 @@ int sum(int num1, int num2) {
     return (num1 + num2);
 }
 
+int power(int b, int e) {
+    int tmp = b;
+    while (e > 1) {
+        b *= tmp;
+        e--;
+    }
+
+    return b;
+}
+
+int power(double b, int e) {
+    int tmp = b;
+    while (e > 1) {
+        b *= tmp;
+        e--;
+    }
+    return (double) b;
+}
+
 int main() {
     int localVariable = 10;
     for (int i = 0; i < globalVariable; i++) {
@@ -29,6 +48,8 @@ int main() {
     printHello();
 
     cout << "\n2 + 3 = " << sum(2, 3) << endl;
-    
+
+    cout << "\n2^3 = " << power(2, 3) << endl;
+
     return EXIT_SUCCESS;
 }

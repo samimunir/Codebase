@@ -13,3 +13,9 @@ __1.2 - Variables__
 __1.3 - User Input__
 ### 2. Section 2 - Functions
 __2.1 - Local & Global Variables__
+
+__2.2 - Function arguments__
+
+__2.3 - Function return values__
+
+__2.4 - Function overloading__
