@@ -38,6 +38,7 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 * CS416 - Operating System Design
     * Project 1
         * stack.c
+        * bitops.c
 ### Mastering C Programming
 * Hello World
 * Variables
