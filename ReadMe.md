@@ -35,6 +35,9 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 ### Rutgers
 * CS210 - Data Management for Data Science
     * Homework 1
+* CS416 - Operating System Design
+    * Project 1
+        * stack.c
 ### Mastering C Programming
 * Hello World
 * Variables
