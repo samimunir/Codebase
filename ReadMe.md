@@ -39,6 +39,7 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
     * Project 1
         * stack.c
         * bitops.c
+        * threads.c
 ### Mastering C Programming
 * Hello World
 * Variables
