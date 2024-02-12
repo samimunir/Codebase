@@ -120,3 +120,21 @@ print('\tresult:', result)
 #   duplicates, and a triple should not use the same number more than once.
 #   All triples should be return in a list of tuple *s*, where each tuple
 #   *s* is in sorted order.
+def one_triples(ints):
+    result = []
+    n = len(ints)
+    for i in range(n):
+        for j in range(i + 1, n):
+            for k in range(j + 1, n):
+                if ints[i] + ints[j] + ints[k] == 1:
+                    result.append(tuple([ints[i], ints[j], ints[k]]))
+    return result
+
+# <--- Testing function stats(ints) --->
+print('\n<--- Testing function one_triples(ints) --->')
+result = one_triples([-3, 1, 4, 3])
+print('one_triples([-3, 1, 4, 3]):')
+print('\tresult:', result)
+result = one_triples([-8, 1, -2, 2, 4, 5, -3, -1])
+print('one_triples([-8, 1, -2, 2, 4, 5, -3, -1]):')
+print('\tresult:', result)

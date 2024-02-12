@@ -38,6 +38,8 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
         * Q1 - primes(n)
         * Q2 - factor(n)
         * Q3 - decreasing_digits(n)
+        * Q4 - stats(ints)
+        * Q5 - one_triples(ints)
 * CS416 - Operating System Design
     * Project 1
         * stack.c
