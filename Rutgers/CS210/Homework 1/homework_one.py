@@ -127,7 +127,7 @@ def one_triples(ints):
         for j in range(i + 1, n):
             for k in range(j + 1, n):
                 if ints[i] + ints[j] + ints[k] == 1:
-                    result.append(tuple([ints[i], ints[j], ints[k]]))
+                    result.append(tuple(sorted([ints[i], ints[j], ints[k]])))
     return result
 
 # <--- Testing function stats(ints) --->
