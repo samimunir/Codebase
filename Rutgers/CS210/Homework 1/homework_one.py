@@ -23,11 +23,9 @@ print('\n<--- Testing function primes(n) --->')
 result = primes(10)
 print('primes(10):')
 print('\tresult:', result)
-
 result = primes(3)
 print('primes(3):')
 print('\tresult:', result)
-
 result = primes(100)
 print('primes(100):')
 print('\tresult:', result)
@@ -112,7 +110,13 @@ print('\n<--- Testing function stats(ints) --->')
 result = stats([15, 4, 10, 2])
 print('stats([15, 4, 10, 2]):')
 print('\tresult:', result)
-
 result = stats([-1, 12, -63, 17, 2, 11, 94, -47, 11])
 print('stats([-1, 12, -63, 17, 2, 11, 94, -47, 11]):')
 print('\tresult:', result)
+####################################################################
+# Question 5 - one_triples
+# Write a function called one_triples to return all triples in a list of
+#   integers that sum to one. You can assume the list won't contain any
+#   duplicates, and a triple should not use the same number more than once.
+#   All triples should be return in a list of tuple *s*, where each tuple
+#   *s* is in sorted order.
