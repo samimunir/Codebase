@@ -35,6 +35,8 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 ### Rutgers
 * CS210 - Data Management for Data Science
     * Homework 1
+        * Q1 - primes(n)
+        * Q2 - factor(n)
 * CS416 - Operating System Design
     * Project 1
         * stack.c
