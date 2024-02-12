@@ -37,6 +37,7 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
     * Homework 1
         * Q1 - primes(n)
         * Q2 - factor(n)
+        * Q3 - decreasing_digits(n)
 * CS416 - Operating System Design
     * Project 1
         * stack.c

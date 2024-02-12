@@ -2,7 +2,7 @@
 # February 14th, 2024
 # Rutgers University
 # CS210 - Data Management for Data Science
-
+####################################################################
 # Question 1 - primes
 # Write a function to return all the prime numbers less than n, where
 #   n is a parameter (assume n > 2).
@@ -31,7 +31,7 @@ print('\tresult:', result)
 result = primes(100)
 print('primes(100):')
 print('\tresult:', result)
-
+####################################################################
 # Question 2 - factor
 # Write a function to return all the prime factors of n, where n is a
 #   parameter.
@@ -59,12 +59,34 @@ print('\tresult:', result)
 result = factor(40)
 print('factor(40):')
 print('\tresult:', result)
-
+####################################################################
 # Question 3 - decreasing_digits
 # Write a function called decreasing_digits to count all integers from 1
 #   to n (inclusive) that have all digits in decreasing order, where n is
 #   is given as a parameter.
+def isDecreasing(num):
+    digits = [int(digit) for digit in str(num)]
+    return all (digits[i] > digits[i + 1] for i in range(len(digits) - 1))
 
+def decreasing_digits(n):
+    count = 0
+    for num in range(1, n + 1):
+        if (isDecreasing(num)):
+            count += 1
+    return count
+
+# <--- Testing function decreasing_digits(n) --->
+print('\n<--- Testing function stats(ints) --->')
+result = decreasing_digits(5)
+print('decreasing_digits(5):')
+print('\tresult:', result)
+result = decreasing_digits(30)
+print('decreasing_digits(30):')
+print('\tresult:', result)
+result = decreasing_digits(37)
+print('decreasing_digits(37):')
+print('\tresult:', result)
+####################################################################
 # Question 4 - stats
 # Write a function called stats to return the mean and median of a list of
 #   integers given as a parameter.
