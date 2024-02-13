@@ -1,7 +1,7 @@
 Sami Munir | Rutgers University | Codebase - ReadMe.md
 # Codebase
 ## Directory
-### 1. Projects
+### Projects
 * Fun with JS - *HTML, CSS, Javascript*
 * Drum Kit - *HTML, CSS, Javascript*
 * AI Airspace - *Python, pygame*
@@ -10,7 +10,7 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 * Keeper App - *HTML, CSS, React.js*
 * Login App - *HTML, CSS, React.js*
 * FlightSim Aircraft Keeper - *HTML, CSS React.js*
-### 2. Complete 2023 Web Developer Bootcamp
+### Complete 2023 Web Developer Bootcamp
 * HTML
 * CSS
 * Javascript
@@ -20,7 +20,7 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 * EJS
 * React.js
 * PostgreSQL
-### 3. Data Structures & Algorithms
+### Data Structures & Algorithms
 * Static arrays
     * C#
 * Linkedlists
@@ -29,7 +29,7 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 * Queues
     * Linkedlist Queue
         * C#
-### 4. C++ From Beginner to Expert
+### C++ From Beginner to Expert
 * Hello World
 * Section 1 - Basics
 ### Rutgers
@@ -55,3 +55,5 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 * Pointers
 * Writing Files
 * Reading Files
+### Machine Learning A-Z
+* __Section 1 - Data Preprocessing__
