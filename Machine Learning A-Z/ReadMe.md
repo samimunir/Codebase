@@ -32,10 +32,9 @@ __Test set__
 ### Feature Scaling
 Always applied to columns of data (never applied to data in rows).
 __Normalization__
-X' = (X - X_min) / (X_max - X_min)
+X' = (X - X_min) / (X_max - X_min) --> [0, 1]
 
 __Standardization__
+X' = (X - u) /  std_dev --> (u is the average)
 
-__Independent Variable__
-
-__Dependent Variable__
+The unscaled features will contain some column values to be significanly larger or smaller than another set of column values. This can cause some negative effects on the training data and lead to undesired and inaccurate results within our model.
