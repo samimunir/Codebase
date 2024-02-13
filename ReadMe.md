@@ -56,4 +56,4 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 * Writing Files
 * Reading Files
 ### Machine Learning A-Z
-* __Section 1 - Data Preprocessing__
+* Section 1 - Data Preprocessing
