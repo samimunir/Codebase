@@ -11,10 +11,31 @@ __1. Data Pre-processing__
 * Importing the data
 * Cleaning up the data
 * Splitting data into training and test sets
+
 __2. Modelling__
 * Build the model
 * Train the model
 * Make predictions using the model
+
 __3. Evaluation__
 * Calculate performance metrics
 * Make a verdict
+
+### Splitting the data set
+__Training set__
+80% of the data allocated for training.
+- Used to build the model.
+__Test set__
+20% of the data allocated for testing.
+- Take the test data and apply our model to them.
+- We can take the predicted values using the model on the test set and compare to the actual values of the test set.
+### Feature Scaling
+Always applied to columns of data (never applied to data in rows).
+__Normalization__
+X' = (X - X_min) / (X_max - X_min)
+
+__Standardization__
+
+__Independent Variable__
+
+__Dependent Variable__
