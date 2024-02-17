@@ -34,6 +34,7 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
 * Programming Basics
     * Variables
     * Data types
+    * Console input
 ### Rutgers
 * CS210 - Data Management for Data Science
     * Homework 1
