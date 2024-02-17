@@ -31,7 +31,7 @@ Sami Munir | Rutgers University | Codebase - ReadMe.md
         * C#
 ### C++ From Beginner to Expert
 * Hello World
-* Section 1 - Basics
+* Programming Basics
 ### Rutgers
 * CS210 - Data Management for Data Science
     * Homework 1
