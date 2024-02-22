@@ -74,3 +74,30 @@ x = 77
 print('x is', str(x))
 
 # Strings
+s1 = 'wrangle'
+s2 = "wrangle"
+print('s1 == s2:', s1 == s2)
+
+# multi-line string with three double quotes
+multi_line_str = """line1,
+line2, and
+line3"""
+print('multi_line_str:', multi_line_str)
+
+print('cs' + '210')
+print('cs' + str(210))
+
+# when you use a number as first operand for +, it thinks you are adding (not concatenating to a string)
+# x = 5 + 'y'
+
+# repeating a string
+print('abc' * 3)
+
+# formatting printed output
+m = 15
+n = 10
+print('{0}/{1} = {2}'.format(m, n, m / n))
+print('{}/{} = {}'.format(m, n, m / n))
+
+# using the f-string
+print(f'{m}/{n} = {m/n}')
