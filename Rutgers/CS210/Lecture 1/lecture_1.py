@@ -101,3 +101,17 @@ print('{}/{} = {}'.format(m, n, m / n))
 
 # using the f-string
 print(f'{m}/{n} = {m/n}')
+
+# parsing numeric value from string, querying the type of a value
+x = int('5')
+print('x:', x)
+print('type(x):', type(x))
+
+y = float('-5.56')
+print('y:', y)
+print('type(y):', type(y))
+
+abctype = type('abc')
+print('type(abctype):', type(abctype))
+
+print("type('abc') == type(x):", type('abc') == type(x))
