@@ -115,3 +115,50 @@ abctype = type('abc')
 print('type(abctype):', type(abctype))
 
 print("type('abc') == type(x):", type('abc') == type(x))
+
+# boolean values and expressions
+
+# string methods
+print('####################')
+s = 'myfile.ipynb'
+ext = 'ipynb'
+print(s.endswith(ext))
+print(s.startswith('m'))
+print(s.startswith('My')) # case sensitive!
+
+s = 'this is a sentence.'
+print(s.find('ten'))
+print(s.find('tense'))
+print(s.isalpha())
+
+res = 'abcd'.isalpha()
+print(res)
+res = ''.isalpha() # if string is empty, returns false
+print(res)
+res = 'hey!'.isalpha() # exclamation point is not a letter
+print(res)
+
+# check if all digits
+res = '1234'.isdigit()
+print(res)
+res = '848-123-4456'.isdigit()
+print(res)
+
+# replace
+res = '09/05/2021'.replace('/', '-')
+print(res)
+
+res = 'This&that&the other'.replace('&', ' and ')
+print(res)
+res = 'This&that&the other'.replace('&', ' and ', 1) # only replace the first occurence
+print(res)
+
+myStr = '   There is fluff at either end   '.strip()
+print(myStr)
+
+myStr = 'Strip out ;,!'
+newStr = myStr.strip(';!')
+print(newStr)
+# the strip method starts from the end of the string, and proceeds character by character.
+# if the character is in the strip argument list, it is stripped out
+# if not, the method stops
