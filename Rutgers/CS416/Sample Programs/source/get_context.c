@@ -23,4 +23,20 @@ int main(int argc, char* argvp[]) {
         printf("--<BAD USAGE: no arguments expected>--\n");
         exit(1);
     }
+
+    if (getcontext(&cctx) < 0) {
+        perror("getcontext");
+        exit(1);
+    }
+
+    puts("I am going again and again with no context...\n");
+
+    if (setcontext(&cctx) < 0) {
+        perror("set current context");
+        exit(1);
+    }
+
+    puts("Looks like I am lost :/\n");
+
+    return 0;
 }
