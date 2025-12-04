@@ -28,7 +28,7 @@ const Auth = () => {
   }, []);
 
   const handleChange = (e) => {
-    setForm((prev) => ({ ...prev, [e.target.namme]: e.target.value }));
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const toggle_auth_mode = () => {
@@ -53,6 +53,7 @@ const Auth = () => {
         setError(
           e.response?.data?.message || "Login failed. Please try again."
         );
+        setLoading(false);
       } finally {
         setLoading(false);
       }
@@ -101,7 +102,7 @@ const Auth = () => {
                 required
                 onChange={handleChange}
                 value={form.email}
-                disabled={loading}
+                // disabled={loading}x
                 className="border-2 border-indigo-500 rounded-xl pl-2 outline-none"
               />
             </div>
@@ -115,7 +116,7 @@ const Auth = () => {
                 required
                 onChange={handleChange}
                 value={form.password}
-                disabled={loading}
+                // disabled={loading}
                 className="border-2 border-indigo-500 rounded-xl pl-2 outline-none"
               />
             </div>
@@ -125,7 +126,7 @@ const Auth = () => {
             <div className="flex items-center justify-center">
               <button
                 type="submit"
-                disabled={loading}
+                // disabled={loading}
                 className="w-[100px] text-center flex items-center justify-center gap-1 border-2 border-indigo-500 text-indigo-500 font-bold rounded-xl px-2 py-1 hover:bg-indigo-500 hover:text-zinc-300 transition-all"
               >
                 Login <LogIn />

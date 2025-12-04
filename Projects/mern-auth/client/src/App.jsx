@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Main from "./layouts/Main";
 import Landing from "./pages/Landing";
 import Auth from "./pages/Auth";
+import Protected from "./layouts/Protected";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   return (
@@ -31,6 +33,16 @@ const App = () => {
               <Main>
                 <Auth />
               </Main>
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <Protected>
+                <Main>
+                  <Dashboard />
+                </Main>
+              </Protected>
             }
           />
         </Routes>
