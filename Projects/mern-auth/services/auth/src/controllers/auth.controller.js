@@ -110,3 +110,32 @@ export const refresh = async (req, res, next) => {
     next(e);
   }
 };
+
+export const logout = async (req, res, next) => {
+  try {
+    res.clearCookie("refresh_token", {
+      httpOnly: true,
+      secure: ENV.NODE_ENV === "production",
+      sameSite: "strict",
+      path: "/api/auth",
+    });
+
+    return res.json({ message: "Logged out successfully" });
+  } catch (e) {
+    next(e);
+  }
+};
+
+export const me = async (req, res, next) => {
+  try {
+    const user_ID = req.user.sub;
+    const db_user = await User.findById(user_ID);
+    if (!db_user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    return res.json({ user: db_user });
+  } catch (e) {
+    next(e);
+  }
+};
