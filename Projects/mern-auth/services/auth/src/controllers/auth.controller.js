@@ -42,3 +42,37 @@ export const register = async (req, res, next) => {
     next(e);
   }
 };
+
+export const login = async (req, res, next) => {
+  try {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+      return res
+        .status(400)
+        .json({ message: "Email and password are required" });
+    }
+
+    const db_user = await User.findOne({ email });
+    if (!db_user) {
+      return res.status(401).json({ message: "Invalid credentials." });
+    }
+
+    const is_password_valid = await bcrypt.compare(
+      password,
+      db_user.password_hash
+    );
+    if (!is_password_valid) {
+      return res.status(401).json({ message: "Invalid credentials." });
+    }
+
+    const access_token = generateAT(db_user);
+    const refresh_token = generateRT(db_user);
+
+    set_refresh_token_cookie(res, refresh_token);
+
+    return res.status(200).json({ db_user, access_token });
+  } catch (e) {
+    next(e);
+  }
+};
