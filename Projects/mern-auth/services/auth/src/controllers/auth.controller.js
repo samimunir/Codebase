@@ -37,7 +37,7 @@ export const register = async (req, res, next) => {
       },
     });
 
-    return res.status(201).json({ user });
+    return res.status(201).json({ user: user });
   } catch (e) {
     next(e);
   }
@@ -71,7 +71,41 @@ export const login = async (req, res, next) => {
 
     set_refresh_token_cookie(res, refresh_token);
 
-    return res.status(200).json({ db_user, access_token });
+    return res.status(200).json({ user: db_user, access_token: access_token });
+  } catch (e) {
+    next(e);
+  }
+};
+
+export const refresh = async (req, res, next) => {
+  try {
+    const token = req.cookies.refresh_token;
+    if (!token) {
+      return res.status(401).json({ message: "Missing refresh token" });
+    }
+
+    let payload;
+    try {
+      payload = jwt.verify(token, ENV.JWT.RT);
+    } catch (err) {
+      return res
+        .status(401)
+        .json({ message: "Invalid or expired refresh token" });
+    }
+
+    const db_user = await User.findById(payload.sub);
+    if (!db_user) {
+      return res.status(401).json({ message: "User no longer exists" });
+    }
+
+    const new_access_token = generateAT(db_user);
+    const new_refresh_token = generateRT(db_user);
+
+    set_refresh_token_cookie(res, new_refresh_token);
+
+    return res
+      .status(200)
+      .json({ user: db_user, access_token: new_access_token });
   } catch (e) {
     next(e);
   }
