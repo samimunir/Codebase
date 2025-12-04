@@ -12,7 +12,7 @@ const PORT = ENV.PORT;
 
 connectDB();
 
-app.use(morgan());
+app.use(morgan("dev"));
 
 app.use(cors({ origin: ENV.CLIENT, credentials: true }));
 
