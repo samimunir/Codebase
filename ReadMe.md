@@ -5,3 +5,7 @@ Sami Munir | samidmunir@outlook.com | Rutgers University '24
 ## C Programming
 
 - hello_world
+
+## Projects
+
+- mern-auth
