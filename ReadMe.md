@@ -16,6 +16,8 @@ Sami Munir | samidmunir@outlook.com | Rutgers University '24
 
 - hello_world
 - variables
+- user_input
+- arrays
 
 ## Leetcode Mastery
 
