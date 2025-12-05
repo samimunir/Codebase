@@ -14,9 +14,10 @@ Sami Munir | samidmunir@outlook.com | Rutgers University '24
 
 ## C Programming
 
-## Leetcode Mastery
-
 - hello_world
+- variables
+
+## Leetcode Mastery
 
 ## Projects
 
