@@ -13,7 +13,7 @@ const requireAuth = (req, res, next) => {
   }
 
   try {
-    const payload = jwt.verify(token, ENV.JWT.RT);
+    const payload = jwt.verify(token, ENV.JWT.AT);
 
     req.user = payload;
 

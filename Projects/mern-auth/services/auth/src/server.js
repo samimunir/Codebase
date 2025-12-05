@@ -19,7 +19,7 @@ app.use(cors({ origin: ENV.CLIENT, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-app.get("/health", (req, res) => {
+app.get("/health", (_req, res) => {
   return res
     .status(200)
     .json({ ok: true, source: "<api.auth>", message: "/api/auth is live" });

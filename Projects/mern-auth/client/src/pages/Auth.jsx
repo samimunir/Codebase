@@ -11,8 +11,8 @@ const Auth = () => {
     first_name: "",
     last_name: "",
   });
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -44,7 +44,7 @@ const Auth = () => {
       try {
         e.preventDefault();
 
-        setLoading(true);
+        setIsSubmitting(true);
         setError("");
 
         await login(form.email, form.password);
@@ -53,9 +53,8 @@ const Auth = () => {
         setError(
           e.response?.data?.message || "Login failed. Please try again."
         );
-        setLoading(false);
       } finally {
-        setLoading(false);
+        setIsSubmitting(false);
       }
     } else {
       alert("Not yet implemented!");

@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import api, { setAccessToken } from "../api/axios.js";
+import api, { set_access_token } from "../api/axios.js";
 
 const AuthContext = createContext(null);
 
@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
 
   const apply_access_token = (token) => {
     setAccessToken(token);
-    api.setAccessToken(token);
+    set_access_token(token);
   };
 
   useEffect(() => {

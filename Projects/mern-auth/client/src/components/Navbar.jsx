@@ -17,11 +17,11 @@ const Navbar = () => {
           className="flex items-center text-indigo-500 font-semibold text-2xl gap-2"
         >
           <Atom />
-          <h1>MERN-Auth</h1>
+          <h1 className="hidden">MERN-Auth</h1>
         </Link>
       </section>
       {/* Desktop Navigation */}
-      <section className="flex items-center gap-4">
+      <section className="hidden 2xl:flex items-center gap-4">
         <Link
           to="/"
           className={`${
@@ -67,7 +67,7 @@ const Navbar = () => {
       <section>
         {isAuthenticated ? (
           <div className="flex items-center gap-4">
-            <p className="text-lg text-indigo-500 font-semibold">
+            <p className="text-lg text-indigo-500 font-semibold cursor-default">
               {user.email}
             </p>
             <Link to="/dashboard" className="text-lg text-indigo-500">
@@ -75,7 +75,7 @@ const Navbar = () => {
             </Link>
             <button
               onClick={() => logout()}
-              className="flex items-center gap-2 text-lg font-bold text-rose-500 px-2 py-1 rounded-md"
+              className="flex items-center gap-2 text-lg font-bold text-rose-500 px-2 py-1 rounded-md cursor-pointer"
             >
               Logout <LogOut />
             </button>

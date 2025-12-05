@@ -35,14 +35,13 @@ const App = () => {
               </Main>
             }
           />
+          <Route element={<Protected />} />
           <Route
             path="/dashboard"
             element={
-              <Protected>
-                <Main>
-                  <Dashboard />
-                </Main>
-              </Protected>
+              <Main>
+                <Dashboard />
+              </Main>
             }
           />
         </Routes>
