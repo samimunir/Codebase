@@ -18,6 +18,7 @@ Sami Munir | samidmunir@outlook.com | Rutgers University '24
 - variables
 - user_input
 - arrays
+- pointers
 
 ## Leetcode Mastery
 
