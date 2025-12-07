@@ -35,15 +35,16 @@ const App = () => {
               </Main>
             }
           />
-          <Route element={<Protected />} />
-          <Route
-            path="/dashboard"
-            element={
-              <Main>
-                <Dashboard />
-              </Main>
-            }
-          />
+          <Route element={<Protected />}>
+            <Route
+              path="/dashboard"
+              element={
+                <Main>
+                  <Dashboard />
+                </Main>
+              }
+            />
+          </Route>
         </Routes>
       </Router>
     </AuthProvider>

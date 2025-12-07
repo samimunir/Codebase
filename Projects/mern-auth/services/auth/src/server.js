@@ -28,5 +28,5 @@ app.get("/health", (_req, res) => {
 app.use("/", authRouter);
 
 app.listen(PORT, () => {
-  console.log(`✅ <api/gateway> live on localhost:${PORT}`);
+  console.log(`✅ <api/auth> live on localhost:${PORT}`);
 });
