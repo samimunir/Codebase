@@ -6,6 +6,8 @@ Sami Munir | samidmunir@outlook.com | Rutgers University '24
 
 ### Arrays
 
+- static arrays
+
 ### Linked-lists
 
 ### Queues
