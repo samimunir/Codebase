@@ -11,5 +11,15 @@ int main() {
     */
    struct array_ds* array_struct = init_array(5);
 
+   /*
+        testing function push_head()
+   */
+  array_struct = push_head(array_struct, 2); // case I
+  array_struct = push_head(array_struct, 5); // case II
+  array_struct = push_head(array_struct, 63); // case III
+  array_struct = push_head(array_struct, 14);
+  array_struct = push_head(array_struct, 87);
+  array_struct = push_head(array_struct, 0); // failure case
+
     return EXIT_SUCCESS;
 }
