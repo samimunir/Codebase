@@ -206,7 +206,10 @@ const Navbar = () => {
                 {user?.profile?.first_name} {user?.profile?.last_name}
               </p>
               <button
-                onClick={logout}
+                onClick={() => {
+                  logout();
+                  setMobileOpen(false);
+                }}
                 className="w-full mt-4 bg-rose-500 rounded-md p-2 flex items-center justify-center gap-2 font-bold"
               >
                 Logout <LogOut className="w-6 h-6" />

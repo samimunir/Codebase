@@ -76,12 +76,16 @@ export const AuthProvider = ({ children }) => {
 
   const resetPassword = async (password, new_password) => {
     try {
-      console.log("<resetPassword> password:", password);
-      console.log("<resetPassword> new_password:", new_password);
-      // const res = await api.put("/api/auth/reset-password", {
-      //   password,
-      //   new_password,
-      // });
+      console.log("<context.Auth.jsx> resetPassword(): password:", password);
+      console.log(
+        "<context.Auth.jsx> resetPassword(): new_password:",
+        new_password
+      );
+      const res = await api.put("/api/auth/reset-password", {
+        password,
+        new_password,
+      });
+      console.log("res:", res);
 
       // if (res.status === 204) {
       //   alert("Password updated successfully!");

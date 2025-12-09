@@ -205,6 +205,7 @@ export default function Dashboard() {
 
     if (passwordForm.newPassword !== passwordForm.confirmNewPassword) {
       alert("Passwords do not match.");
+      setIsEditingProfile(false);
       return;
     }
 
@@ -212,7 +213,7 @@ export default function Dashboard() {
       await resetPassword(passwordForm.password, passwordForm.newPassword);
       // console.log("passwordForm:", passwordForm);
     } catch (e) {
-      //
+      console.log("<Dashboard.jsx> Error in handlePasswordReset():", e);
     } finally {
       setIsEditingProfile(false);
     }
@@ -1050,7 +1051,7 @@ export default function Dashboard() {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl border-2 border-gray-800 p-6">
+                <div className="bg-linear-to-br from-gray-900 to-black rounded-xl border-2 border-gray-800 p-6">
                   <h2 className="text-xl font-bold mb-4 flex items-center space-x-2">
                     <Lock className="w-5 h-5 text-red-600" />
                     <span>Change Password</span>
@@ -1097,6 +1098,7 @@ export default function Dashboard() {
                     </div>
                     <button
                       onClick={handlePasswordReset}
+                      disabled={isEditingProfile}
                       className="w-full bg-red-600 hover:bg-red-700 py-3 rounded-lg font-bold transition-all hover:scale-105"
                     >
                       Update Password

@@ -8,7 +8,7 @@ export const set_access_token = (token) => {
 
 const api = axios.create({
   baseURL: "http://localhost:8080",
-  withCredentials: true, // allow sending refresh cookie
+  withCredentials: true,
 });
 
 api.interceptors.request.use((config) => {
