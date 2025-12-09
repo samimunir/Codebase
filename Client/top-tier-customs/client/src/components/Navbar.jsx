@@ -1,4 +1,5 @@
 import { useTheme } from "../contexts/Theme";
+import { useAuth } from "../contexts/Auth";
 import logo from "../assets/ttc_logo.jpg";
 import {
   Activity,
@@ -79,7 +80,7 @@ const Navbar = () => {
 
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const isAuthenticated = true;
+  const { user, isAuthenticated, logout } = useAuth();
 
   return (
     <nav
@@ -140,9 +141,30 @@ const Navbar = () => {
         </div>
         {/* Right section */}
         <div className="hidden lg:flex items-center gap-2">
+          <p
+            className={`${
+              isDark ? "text-rose-500" : "text-sky-500"
+            } text-sm font-bold`}
+          >
+            {user?.email}
+          </p>
           {isAuthenticated && <Cart />}
           <Theme />
-          {!isAuthenticated ? <LogIn size={28} /> : <LogOut size={28} />}
+          {isAuthenticated ? (
+            <LogOut
+              className="hover:text-rose-500 hover:scale-110 transition-all duration-1000"
+              onClick={logout}
+              size={28}
+            />
+          ) : (
+            <LogIn
+              className={`${
+                location.pathname === "/auth" && accentTextColor
+              } hover:text-rose-500 hover:scale-110 transition-all duration-1000`}
+              onClick={() => navigate("/auth")}
+              size={28}
+            />
+          )}
         </div>
         {/* Mobile toggle */}
         <div className="lg:hidden flex items-center gap-2">
@@ -171,16 +193,38 @@ const Navbar = () => {
                   location.pathname === navItem.href && accentTextColor
                 } ${location.pathname === navItem.href && activeLinkBg} ${
                   isDark ? "hover:text-rose-500" : "hover:text-sky-500"
-                }`}
+                } cursor-default`}
               >
                 <p>{navItem.icon}</p>
                 <p>{navItem.label}</p>
               </div>
             )
           )}
-          {isAuthenticated && (
-            <div className="flex-col">
-              <p className="font-semibold">Sami M.</p>
+          {isAuthenticated ? (
+            <div className="flex-col mt-4">
+              <p className="font-semibold uppercase px-2">
+                {user?.profile?.first_name} {user?.profile?.last_name}
+              </p>
+              <button
+                onClick={logout}
+                className="w-full mt-4 bg-rose-500 rounded-md p-2 flex items-center justify-center gap-2 font-bold"
+              >
+                Logout <LogOut className="w-6 h-6" />
+              </button>
+            </div>
+          ) : (
+            <div>
+              <button
+                onClick={() => {
+                  setMobileOpen(false);
+                  navigate("/auth");
+                }}
+                className={`w-full p-2 rounded-md shadow-2xl bg-emerald-500 ${
+                  isDark ? "text-zinc-950" : "text-zinc-50"
+                } font-bold transition-all duration-1000`}
+              >
+                Get Started
+              </button>
             </div>
           )}
         </div>
