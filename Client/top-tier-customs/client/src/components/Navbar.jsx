@@ -14,6 +14,7 @@ import {
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Theme from "./ui/Theme";
+import Cart from "./ui/Cart";
 
 const navBaseItems = [
   {
@@ -56,7 +57,7 @@ const navBaseItems = [
 
 const navAuthItems = [
   {
-    id: 0,
+    id: 6,
     label: "Dashboard",
     href: "/dashboard",
     icon: <Atom className="w-6 h-6" />,
@@ -67,7 +68,9 @@ const Navbar = () => {
   const { theme } = useTheme();
   const isDark = theme === "dark";
   const accentTextColor = isDark ? "text-rose-500" : "text-sky-500";
-  const activeLinkBg = isDark ? "" : "bg-zinc-300/90 shadow-2xl";
+  const activeLinkBg = isDark
+    ? "bg-zinc-800/50 shadow-2xl"
+    : "bg-zinc-200/50 shadow-2xl";
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -91,7 +94,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Logo"
-            className={`w-[50px] rounded-full border-3 transition-all duration-1000 ${
+            className={`w-10 rounded-full border-3 transition-all duration-1000 ${
               isDark ? "border-rose-500" : "border-sky-500"
             }`}
           />
@@ -107,14 +110,45 @@ const Navbar = () => {
           </h1>
         </div>
         {/* Desktop navigation */}
+        <div className="hidden lg:flex items-center gap-4">
+          {navBaseItems.map((navItem) => (
+            <div
+              onClick={() => navigate(navItem.href)}
+              className={`${
+                location.pathname === navItem.href && accentTextColor
+              } flex items-center gap-2 font-semibold hover:${accentTextColor} transition-all duration-1000 cursor-default`}
+            >
+              <p>{navItem.icon}</p>
+              <p>{navItem.label}</p>
+            </div>
+          ))}
+          {isAuthenticated &&
+            navAuthItems.map((navItem) => (
+              <div
+                key={navItem.id}
+                onClick={() => navigate(navItem.href)}
+                className={`${
+                  location.pathname === navItem.href && accentTextColor
+                } flex items-center gap-2 font-semibold hover:${accentTextColor} transition-all duration-1000 cursor-default`}
+              >
+                <p>{navItem.icon}</p>
+                <p>{navItem.label}</p>
+              </div>
+            ))}
+        </div>
         {/* Right section */}
         <div className="hidden lg:flex items-center gap-2">
+          {isAuthenticated && <Cart />}
           <Theme />
         </div>
         {/* Mobile toggle */}
         <div className="lg:hidden flex items-center gap-2">
+          <Cart />
           <Theme />
-          <button onClick={() => setMobileOpen((prev) => !prev)}>
+          <button
+            onClick={() => setMobileOpen((prev) => !prev)}
+            className="p-2"
+          >
             {mobileOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
