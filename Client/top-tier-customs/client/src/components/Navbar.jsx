@@ -5,6 +5,8 @@ import {
   Atom,
   Home,
   Info,
+  LogIn,
+  LogOut,
   Menu,
   Package,
   Users,
@@ -35,24 +37,24 @@ const navBaseItems = [
     href: "/services",
     icon: <Wrench className="w-6 h-6" />,
   },
-  {
-    id: 3,
-    label: "Bookings",
-    href: "/available-bookings",
-    icon: <Activity className="w-6 h-6" />,
-  },
-  {
-    id: 4,
-    label: "About",
-    href: "/about",
-    icon: <Info className="w-6 h-6" />,
-  },
-  {
-    id: 5,
-    label: "Testimonials",
-    href: "/testimonials",
-    icon: <Users className="w-6 h-6" />,
-  },
+  // {
+  //   id: 3,
+  //   label: "Bookings",
+  //   href: "/available-bookings",
+  //   icon: <Activity className="w-6 h-6" />,
+  // },
+  // {
+  //   id: 4,
+  //   label: "About",
+  //   href: "/about",
+  //   icon: <Info className="w-6 h-6" />,
+  // },
+  // {
+  //   id: 5,
+  //   label: "Testimonials",
+  //   href: "/testimonials",
+  //   icon: <Users className="w-6 h-6" />,
+  // },
 ];
 
 const navAuthItems = [
@@ -98,7 +100,7 @@ const Navbar = () => {
               isDark ? "border-rose-500" : "border-sky-500"
             }`}
           />
-          <h1 className="text-2xl font-bold uppercase">
+          <h1 className="text-xl font-bold uppercase">
             Top-Tier{" "}
             <span
               className={`transition-all duration-1000 ${
@@ -140,6 +142,7 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-2">
           {isAuthenticated && <Cart />}
           <Theme />
+          {!isAuthenticated ? <LogIn size={28} /> : <LogOut size={28} />}
         </div>
         {/* Mobile toggle */}
         <div className="lg:hidden flex items-center gap-2">
