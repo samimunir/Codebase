@@ -139,3 +139,38 @@ export const me = async (req, res, next) => {
     next(e);
   }
 };
+
+export const resetPassword = async (req, res, next) => {
+  try {
+    const user_ID = req.user.sub;
+    const db_user = await User.findById(user_ID);
+    if (!db_user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    const { password, new_password } = req.body;
+    const is_password_valid = await bcrypt.compare(
+      password,
+      db_user.password_hash
+    );
+    if (!is_password_valid) {
+      return res
+        .status(401)
+        .json({ message: "Invalid password. Unable to update password." });
+    }
+
+    if (password === new_password) {
+      return res
+        .status(400)
+        .json({ message: "New password must be different than old." });
+    }
+
+    const new_password_hash = await bcrypt.hash(password, 10);
+    db_user.password_hash = new_password_hash.toString();
+    await db_user.save();
+
+    return res.status(204).json({ message: "Your password has been updated." });
+  } catch (e) {
+    next(e);
+  }
+};

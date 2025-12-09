@@ -1,26 +1,16 @@
-// src/api/axios.js
 import axios from "axios";
 
-// ---------------------------------------------
-// In-memory access token (safe from XSS)
-// ---------------------------------------------
 let access_token = null;
 
 export const set_access_token = (token) => {
   access_token = token;
 };
 
-// ---------------------------------------------
-// Axios instance
-// ---------------------------------------------
 const api = axios.create({
   baseURL: "http://localhost:8080",
   withCredentials: true, // allow sending refresh cookie
 });
 
-// ---------------------------------------------
-// REQUEST INTERCEPTOR — attach access token
-// ---------------------------------------------
 api.interceptors.request.use((config) => {
   if (access_token) {
     config.headers.Authorization = `Bearer ${access_token}`;
@@ -28,9 +18,6 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// ---------------------------------------------
-// RESPONSE INTERCEPTOR — refresh logic
-// ---------------------------------------------
 let is_refreshing = false;
 let refresh_queue = [];
 
@@ -63,6 +50,7 @@ api.interceptors.response.use(
       "/api/auth/register",
       "/api/auth/logout",
       "/api/auth/refresh",
+      "/api/auth/reset-password",
     ];
 
     const shouldSkipRefresh = skipRefreshPaths.some((p) => url.includes(p));

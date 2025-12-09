@@ -13,6 +13,9 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    password_last_reset: {
+      type: Date,
+    },
     role: {
       type: String,
       enum: ["customer", "admin"],
@@ -36,6 +39,22 @@ const userSchema = new mongoose.Schema(
       },
       phone: {
         type: String,
+      },
+    },
+    settings: {
+      notifications: {
+        order_updates: {
+          type: Boolean,
+          default: false,
+        },
+        booking_reminders: {
+          type: Boolean,
+          default: false,
+        },
+        promotions: {
+          type: Boolean,
+          default: false,
+        },
       },
     },
   },

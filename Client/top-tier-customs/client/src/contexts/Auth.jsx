@@ -74,6 +74,25 @@ export const AuthProvider = ({ children }) => {
     setStatus("unauthenticated");
   };
 
+  const resetPassword = async (password, new_password) => {
+    try {
+      console.log("<resetPassword> password:", password);
+      console.log("<resetPassword> new_password:", new_password);
+      // const res = await api.put("/api/auth/reset-password", {
+      //   password,
+      //   new_password,
+      // });
+
+      // if (res.status === 204) {
+      //   alert("Password updated successfully!");
+      // } else {
+      //   alert("Failed to update password.");
+      // }
+    } catch (e) {
+      console.error("Failed to update password:", e.message);
+    }
+  };
+
   const value = {
     user,
     accessToken,
@@ -81,6 +100,7 @@ export const AuthProvider = ({ children }) => {
     register,
     login,
     logout,
+    resetPassword,
     isAuthenticated: status === "authenticated" && !!user,
   };
 
