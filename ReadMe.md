@@ -30,6 +30,25 @@ Sami Munir | samidmunir@outlook.com | Rutgers University '24
 
 - hello_world
 - variables
+- data_types
+- functions
+- ownership
+- references_borrowing
+- slices
+- structs
+- enums
+- generics
+- option_result_enums
+- vectors
+- strings
+- hash_maps
+- error_handling
+- traits
+- lifetimes
+- closures
+- iterators
+- testing
+- smart_pointers
 
 ## Leetcode Mastery
 
