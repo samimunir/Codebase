@@ -1,3 +1,10 @@
+/*
+    To enable compiler directive for entire file
+*/
+// #![allow(unused_variables)] 
+
+type Meters = i16;
+
 fn main() {
     println!("Variables in Rust");
     println!("-------------------------");
@@ -54,4 +61,31 @@ fn main() {
         println!("\nis_duplicate (inner): {}", is_duplicate);
     }
     println!("is_duplicate (outer): {}", is_duplicate);
+
+    /*
+        A constant is a name assigned to a value.
+        - a constant's value cannot change
+        - cannot use the mut keyword with constants
+        - must provide type & value when declaring a constant
+    */
+    const PI: f64 = 3.14159265;
+    println!("\nPI (constant): {}", PI);
+
+    /*
+        Type alias is an alternate name that we can assign to an existing type in Rust.
+        - allows to provide additional context for a given type.
+    */
+    let mile_race_length: Meters = 1600; // meters
+    println!("\nmile_race_length: {} meters", mile_race_length);
+
+    /*
+        A compiler directive is an annotation that tells the compiler how to parse the code.
+        - an instruction to the compiler to tell it how to think & operate
+        - can be applied to single instructions, functions, or files
+    */
+    #[allow(unused_variables)]
+    /*
+        This directive allows unused variables like half_mile_race_length.
+    */
+    let half_mile_race_length: Meters = 800;
 }
