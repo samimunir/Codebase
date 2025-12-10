@@ -13,4 +13,12 @@ fn main() {
     let sum = a + b;
     println!("\na: {}, b: {}", a, b);
     println!("sum ({} + {}): {}", a, b, sum);
+
+    /*
+        Variables are immutable by default.
+    */
+    let mut x: i8 = 1;
+    println!("\nx: {}", x);
+    x = x + 1;
+    println!("x (after mut): {}", x);
 }

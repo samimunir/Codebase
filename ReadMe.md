@@ -29,6 +29,7 @@ Sami Munir | samidmunir@outlook.com | Rutgers University '24
 ## Rust Programming
 
 - hello_world
+- variables
 
 ## Leetcode Mastery
 
