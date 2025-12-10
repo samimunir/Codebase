@@ -134,3 +134,21 @@ struct array_ds* pop_head(struct array_ds* array_struct) {
 
     return array_struct;
 }
+
+struct array_ds* push_tail(struct array_ds* array_struct, int element) {
+    printf("\npush_tail(%d) called -->\n", element);
+
+    if (is_full(array_struct)) {
+        printf("--<ERROR>-- cannot add new element in full-capacity array.\n");
+        print_array_ds(array_struct);
+        return array_struct;
+    }
+
+    array_struct -> pointer++;
+    array_struct -> array[array_struct -> pointer] = element;
+    array_struct -> num_of_elements++;
+
+    print_array_ds(array_struct);
+
+    return array_struct;
+}

@@ -12,3 +12,5 @@ struct array_ds* init_array(int capacity);
 struct array_ds* push_head(struct array_ds* array_struct, int element);
 
 struct array_ds* pop_head(struct array_ds* array_struct);
+
+struct array_ds* push_tail(struct array_ds* array_struct, int element);
