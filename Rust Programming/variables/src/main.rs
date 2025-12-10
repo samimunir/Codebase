@@ -21,4 +21,12 @@ fn main() {
     println!("\nx: {}", x);
     x = x + 1;
     println!("x (after mut): {}", x);
+
+    /*
+        Variable shadowing is different than assigning a new value to an existing mutable variable.
+
+        - this means redeclaring a variable. The original variable is replaced by the new one.
+    */
+    let x: f32 = 3.14;
+    println!("\nx (after shadowing): {}", x);
 }
