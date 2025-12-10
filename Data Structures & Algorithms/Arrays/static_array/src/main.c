@@ -21,5 +21,15 @@ int main() {
   array_struct = push_head(array_struct, 87);
   array_struct = push_head(array_struct, 0); // failure case
 
+  /*
+        testing function pop_head()
+  */
+    array_struct = pop_head(array_struct);
+    array_struct = pop_head(array_struct);
+    array_struct = pop_head(array_struct);
+    array_struct = pop_head(array_struct);
+    array_struct = pop_head(array_struct);
+    array_struct = pop_head(array_struct); // failure case
+
     return EXIT_SUCCESS;
 }

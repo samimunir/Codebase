@@ -108,3 +108,29 @@ struct array_ds* push_head(struct array_ds* array_struct, int element) {
 
     return array_struct;
 }
+
+struct array_ds* pop_head(struct array_ds* array_struct) {
+   printf("\npop_head() called -->\n");
+
+    if (is_empty(array_struct)) {
+        printf("--<ERROR>-- cannot remove from empty array.\n");
+        print_array_ds(array_struct);
+        return array_struct;
+    }
+
+    if (array_struct -> pointer == 0) {
+        array_struct -> array[0] = 0;
+        array_struct -> pointer--;
+        array_struct -> num_of_elements--;
+    } else {
+        for (int i = 0; i < array_struct -> pointer; i++) {
+            array_struct -> array[i] = array_struct -> array[i + 1];
+        }
+        array_struct -> pointer--;
+        array_struct -> num_of_elements--;
+    }
+
+    print_array_ds(array_struct);
+
+    return array_struct;
+}
