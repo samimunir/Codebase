@@ -58,4 +58,59 @@ fn main() {
     /*
         usize & isize are type aliases for dynamic numeric data types depending on the computer architecture.
     */
+
+    println!("\nThis is a String literal.");
+
+    let file_path = "C:\\samid\\Desktop\\samidmunir\\Codebase\\Rust Programming";
+    println!("\nfile_path: {}", file_path);
+    let file_path_2 = r"C:\samid\Desktop\samidmunir\Codebase\Rust Programming\data_types";
+    println!("\nfile_path_2 (raw String): {}", file_path_2);
+
+    /*
+        A method is a function that lives on a value.
+        - it's can action that we can ask the value to execute
+        - Syntax: value.method()
+    */
+    let num: i8 = -7;
+    println!("\nnum: {}", num);
+    println!("num.abs(): {}", num.abs());
+
+    let empty_space: &str = "     random content     ";
+    println!("\nempty_space: {}", empty_space);
+    println!("empty_space.trim(): {}", empty_space.trim());
+
+    /*
+        Arguments to a method/function can tweak the behavior of that method/function.
+    */
+    println!("\nnum: {}", num);
+    println!("num.pow(2): {}", num.pow(2));
+
+    /*
+        A floating-point type represents a decimal number.
+        - 32bit or 64bit (4 bytes vs. 8 bytes) floor ciel round
+    */
+    let pi: f64 = 3.14159;
+    println!("\npi: {}", pi);
+    println!("pi.floor(): {}", pi.floor());
+    println!("pi.ceil(): {}", pi.ceil());
+    println!("pi.round(): {}", pi.round());
+
+    /*
+        A format specifier customizes the printed representation of the interpolated value.
+    */
+    println!("\npi (formatted): {:.4}", pi);
+
+    /*
+        Casting is transforming from one type to another.
+    */
+    let miles_away = 50;
+    #[allow(unused_variables)]
+    let miles_away_i8 = miles_away as i8;
+
+    let miles_away = 100.329032;
+    println!("\nmiles_away: {}", miles_away);
+    let miles_away_f32 = miles_away as f32;
+    println!("miles_away_f32: {}", miles_away_f32);
+    let miles_away_int = miles_away as i32;
+    println!("miles_away_int: {}", miles_away_int);
 }
