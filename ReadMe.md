@@ -26,6 +26,10 @@ Sami Munir | samidmunir@outlook.com | Rutgers University '24
 - arrays
 - pointers
 
+## Rust Programming
+
+- hello_world
+
 ## Leetcode Mastery
 
 ## Projects
