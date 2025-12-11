@@ -113,4 +113,55 @@ fn main() {
     println!("miles_away_f32: {}", miles_away_f32);
     let miles_away_int = miles_away as i32;
     println!("miles_away_int: {}", miles_away_int);
+
+    /*
+        Augmented Assignment Operator
+    */
+    let mut num: i8 = 1;
+    num += 1;
+    println!("\nnum: {}", num);
+
+    /*
+        Booleans
+        - 1 byte
+    */
+    #[allow(unused_variables)]
+    let is_raining = false;
+
+    /*
+        Characters
+    */
+    let dollar_sign = '$';
+    println!("\ndollar_sign: {}", dollar_sign);
+    println!("dollar_sign.is_alphabetic(): {}", dollar_sign.is_alphabetic());
+
+    /*
+        Arrays
+        - an array is a fixed-size collection of homogenous data (data of the same type).
+    */
+    let nums = [2, 5, 11, 63, 87, 409];
+
+    /*
+        The Display Trait
+    */
+
+    /*
+        The Debug Trait
+    */
+
+    /*
+        The dbg! Macro
+    */
+
+    /*
+        Tuples
+    */
+
+    /*
+        Ranges & Range iteration
+    */
+
+    /*
+        Intro to Generics
+    */
 }
