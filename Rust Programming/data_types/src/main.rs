@@ -140,22 +140,52 @@ fn main() {
         - an array is a fixed-size collection of homogenous data (data of the same type).
     */
     let nums = [2, 5, 11, 63, 87, 409];
+    println!("\nnums.len(): {}", nums.len());
+    println!("nums[0]: {}", nums[0]);
+    println!("nums[2]: {}", nums[2]);
+    println!("nums[4]: {}", nums[4]);
+    println!("nums[5]: {}", nums[5]);
+
+    /*
+        Traits: a contract that requires that a type supports one or more methods.
+        - traits establish consistency between types; methods that represent the same behavior have the same name.
+        - when a type opts in to honoring a trait's requirements, we say the type implements the trait.
+        - types can very in their implementation but stil implement the same trait.
+
+        A type can choose to opting in to implementing a trait.
+        - a type can implement multiple traits. There are hundreds of traits available in Rust
+        - a trait is called an interface or protocol in other programming languages
+    */
 
     /*
         The Display Trait
+        - requires that a type can be represented as a user-friendly, readable string.
+        - mandates a format method that returns the string.
+        - we use the {} interpolation syntax, Rust relies on the format method.
+        - Integers, floats, and booleans all implement the Display trait so we are able to interpolate them with curly braces.
     */
 
     /*
         The Debug Trait
+        - format the output in a programmer-facing, debugging context.
     */
+    let temps: [i8; 5] = [21, 19, 21, 20, 23];
+    println!("\ntemps: {:?}", temps);
+    // println!("\ntemps: {temps:?}");
+    // println!("\ntemps: {temps:#?}");
 
     /*
         The dbg! Macro
     */
+    dbg!(2 + 2);
 
     /*
         Tuples
+        - a tuple is a fixed size collection of varying data types.
     */
+    let developer = ("Sami M.", 24, "Rust", "Windows");
+    println!("\ndeveloper: {:?}", developer);
+    println!("developer.2: {}", developer.2);
 
     /*
         Ranges & Range iteration
