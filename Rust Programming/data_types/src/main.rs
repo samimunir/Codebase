@@ -186,12 +186,41 @@ fn main() {
     let developer = ("Sami M.", 24, "Rust", "Windows");
     println!("\ndeveloper: {:?}", developer);
     println!("developer.2: {}", developer.2);
+    #[allow(unused_variables)]
+    let (name, age, programming_language, operating_system) = developer;
 
     /*
         Ranges & Range iteration
+        - a range is a sequence/interval of consecutive values
     */
+    let month_days = 1..31;
+    println!("\nmonth_days: {:?}", month_days);
+    
+    let year_months = 1..=11;
+    println!("\nyear_months: {:?}", year_months);
+
+    println!("\nyear_months ->");
+    for month in year_months {
+        println!("{}", month);
+    }
+
+
+    println!();
+    for day in month_days {
+        println!("{}", day);
+    }
 
     /*
-        Intro to Generics
+        Intro to Generics: a generic represents a type argument.
+        - a value is like 5
+        - a type is like i8
+
+        A placeholder for a future possible type.
     */
+    let nums: std::ops::Range<i8> = 1..5;
+    print!("\nnums: [");
+    for num in nums {
+        print!("{}, ", num);
+    }
+    print!("]");
 }
