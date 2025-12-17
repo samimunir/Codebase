@@ -193,6 +193,12 @@ export default function Dashboard() {
 
   const { user, resetPassword, logout } = useAuth();
 
+  const [notificationsSettings, setNotificationsSettings] = useState({
+    orderUpdates: user.settings.notifications.order_updates,
+    bookingReminders: user.settings.notifications.booking_reminders,
+    promotionalOffers: user.settings.notifications.promotions,
+  });
+
   const handleChange = (e) => {
     setPasswordForm({ ...passwordForm, [e.target.name]: e.target.value });
     // setError("");
@@ -212,8 +218,23 @@ export default function Dashboard() {
     try {
       await resetPassword(passwordForm.password, passwordForm.newPassword);
       // console.log("passwordForm:", passwordForm);
+      // alert("password reset success");
     } catch (e) {
       console.log("<Dashboard.jsx> Error in handlePasswordReset():", e);
+    } finally {
+      setIsEditingProfile(false);
+    }
+  };
+
+  const handleSaveNotifications = async (e) => {
+    e.preventDefault();
+
+    setIsEditingProfile(true);
+
+    try {
+      //
+    } catch (e) {
+      console.log("<Dashboard.jsx> Error in handleSaveNotifications():", e);
     } finally {
       setIsEditingProfile(false);
     }
@@ -1042,21 +1063,43 @@ export default function Dashboard() {
             {/* Security Tab */}
             {activeTab === "security" && (
               <div className="space-y-6">
+                {/* Header */}
                 <div>
-                  <h1 className="text-3xl font-black mb-2">
+                  <h1
+                    className={`${
+                      isDark ? "text-zinc-300" : "text-zinc-900"
+                    } text-3xl font-black mb-2 transition-all duration-1000`}
+                  >
                     Security Settings
                   </h1>
                   <p className="text-gray-400">
                     Manage your password and account security.
                   </p>
                 </div>
-
+                {/* Password Reset Control */}
                 <div className="bg-linear-to-br from-gray-900 to-black rounded-xl border-2 border-gray-800 p-6">
                   <h2 className="text-xl font-bold mb-4 flex items-center space-x-2">
                     <Lock className="w-5 h-5 text-red-600" />
-                    <span>Change Password</span>
+                    <span
+                      className={`${
+                        isDark ? "text-zinc-100" : ""
+                      } transition-all duration-1000`}
+                    >
+                      Change Password
+                    </span>
                   </h2>
+                  {user?.password_last_reset && (
+                    <p
+                      className={`mb-4 text-sm ${
+                        isDark ? "text-zinc-500" : "text-zinc-700"
+                      } transition-all duration-1000`}
+                    >
+                      <span>Password last reset:</span>{" "}
+                      {user?.password_last_reset.substring(0, 10)}
+                    </p>
+                  )}
                   <div className="space-y-4">
+                    {/* Current Password */}
                     <div>
                       <label className="block text-sm font-semibold text-gray-400 mb-2">
                         Current Password
@@ -1070,6 +1113,7 @@ export default function Dashboard() {
                         className="w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-red-600 transition-colors"
                       />
                     </div>
+                    {/* New Password */}
                     <div>
                       <label className="block text-sm font-semibold text-gray-400 mb-2">
                         New Password
@@ -1083,6 +1127,7 @@ export default function Dashboard() {
                         className="w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-red-600 transition-colors"
                       />
                     </div>
+                    {/* Confirm New Password */}
                     <div>
                       <label className="block text-sm font-semibold text-gray-400 mb-2">
                         Confirm New Password
@@ -1096,6 +1141,7 @@ export default function Dashboard() {
                         className="w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-red-600 transition-colors"
                       />
                     </div>
+                    {/* Update Password Button */}
                     <button
                       onClick={handlePasswordReset}
                       disabled={isEditingProfile}
@@ -1105,16 +1151,28 @@ export default function Dashboard() {
                     </button>
                   </div>
                 </div>
-
-                <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl border-2 border-gray-800 p-6">
+                {/* Notificaitons Control */}
+                <div className="bg-linear-to-br from-gray-900 to-black rounded-xl border-2 border-gray-800 p-6">
                   <h2 className="text-xl font-bold mb-4 flex items-center space-x-2">
                     <Bell className="w-5 h-5 text-red-600" />
-                    <span>Notification Preferences</span>
+                    <span
+                      className={`${
+                        isDark ? "text-zinc-100" : ""
+                      } transition-all duration-1000`}
+                    >
+                      Notification Preferences
+                    </span>
                   </h2>
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="font-semibold">Order Updates</p>
+                        <p
+                          className={`${
+                            isDark ? "text-zinc-300" : ""
+                          } font-semibold transition-all duration-1000`}
+                        >
+                          Order Updates
+                        </p>
                         <p className="text-sm text-gray-400">
                           Receive notifications about your orders
                         </p>
@@ -1123,14 +1181,25 @@ export default function Dashboard() {
                         <input
                           type="checkbox"
                           className="sr-only peer"
-                          defaultChecked
+                          checked={notificationsSettings.orderUpdates}
+                          onChange={() => {
+                            setNotificationsSettings({
+                              orderUpdates: !notificationsSettings.orderUpdates,
+                            });
+                          }}
                         />
                         <div className="w-12 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-6 peer-checked:bg-red-600 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
                       </label>
                     </div>
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="font-semibold">Booking Reminders</p>
+                        <p
+                          className={`${
+                            isDark ? "text-zinc-300" : ""
+                          } font-semibold transition-all duration-1000`}
+                        >
+                          Booking Reminders
+                        </p>
                         <p className="text-sm text-gray-400">
                           Get reminded about upcoming appointments
                         </p>
@@ -1139,23 +1208,53 @@ export default function Dashboard() {
                         <input
                           type="checkbox"
                           className="sr-only peer"
-                          defaultChecked
+                          checked={notificationsSettings.bookingReminders}
+                          onChange={() => {
+                            setNotificationsSettings({
+                              bookingReminders:
+                                !notificationsSettings.bookingReminders,
+                            });
+                          }}
                         />
                         <div className="w-12 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-6 peer-checked:bg-red-600 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
                       </label>
                     </div>
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="font-semibold">Promotional Emails</p>
+                        <p
+                          className={`${
+                            isDark ? "text-zinc-300" : ""
+                          } font-semibold transition-all duration-1000`}
+                        >
+                          Promotional Emails
+                        </p>
                         <p className="text-sm text-gray-400">
                           Receive special offers and promotions
                         </p>
                       </div>
                       <label className="relative inline-block w-12 h-6">
-                        <input type="checkbox" className="sr-only peer" />
+                        <input
+                          type="checkbox"
+                          className="sr-only peer"
+                          checked={notificationsSettings.promotionalOffers}
+                          onChange={() => {
+                            setNotificationsSettings({
+                              promotionalOffers:
+                                !notificationsSettings.promotionalOffers,
+                            });
+                          }}
+                        />
                         <div className="w-12 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-6 peer-checked:bg-red-600 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
                       </label>
                     </div>
+                    {/* Update Notifications Button */}
+                    <button
+                      // onClick={handlePasswordReset}
+                      disabled={isEditingProfile}
+                      className="w-full bg-red-600 hover:bg-red-700 py-3 rounded-lg font-bold transition-all hover:scale-105"
+                    >
+                      Update Notification Preferences
+                    </button>
                   </div>
                 </div>
               </div>

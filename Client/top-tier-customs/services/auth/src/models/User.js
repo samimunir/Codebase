@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
     password_last_reset: {
-      type: Date,
+      type: String,
     },
     role: {
       type: String,

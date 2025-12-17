@@ -87,11 +87,11 @@ export const AuthProvider = ({ children }) => {
       });
       console.log("res:", res);
 
-      // if (res.status === 204) {
-      //   alert("Password updated successfully!");
-      // } else {
-      //   alert("Failed to update password.");
-      // }
+      if (res.status === 204) {
+        alert("Password updated successfully!");
+      } else {
+        alert("Failed to update password.");
+      }
     } catch (e) {
       console.error("Failed to update password:", e.message);
     }

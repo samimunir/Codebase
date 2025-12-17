@@ -165,8 +165,13 @@ export const resetPassword = async (req, res, next) => {
         .json({ message: "New password must be different than old." });
     }
 
-    const new_password_hash = await bcrypt.hash(password, 10);
-    db_user.password_hash = new_password_hash.toString();
+    const new_password_hash = await bcrypt.hash(new_password, 10);
+    // await db_user.updateOne({ password_hash: new_password_hash });
+    db_user.password_hash = new_password_hash;
+
+    const now = new Date().toISOString();
+    db_user.password_last_reset = now;
+
     await db_user.save();
 
     return res.status(204).json({ message: "Your password has been updated." });
