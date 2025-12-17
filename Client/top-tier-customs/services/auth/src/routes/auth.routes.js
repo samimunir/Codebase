@@ -6,6 +6,7 @@ import {
   logout,
   me,
   resetPassword,
+  updateSettings,
 } from "../controllers/auth.controller.js";
 import requireAuth from "../middleware/auth.middleware.js";
 
@@ -17,5 +18,6 @@ authRouter.post("/refresh", refresh);
 authRouter.post("/logout", logout);
 authRouter.get("/me", requireAuth, me);
 authRouter.put("/reset-password", requireAuth, resetPassword);
+authRouter.put("/update-settings", requireAuth, updateSettings);
 
 export default authRouter;

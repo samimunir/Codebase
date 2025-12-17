@@ -179,3 +179,24 @@ export const resetPassword = async (req, res, next) => {
     next(e);
   }
 };
+
+export const updateSettings = async (req, res, next) => {
+  try {
+    const user_ID = req.user.sub;
+    const db_user = await User.findById(user_ID);
+    if (!db_user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    const { settings } = req.body;
+    db_user.settings = settings;
+
+    await db_user.save();
+
+    return res
+      .status(204)
+      .json({ message: "Notification settings updated successfully." });
+  } catch (e) {
+    next(e);
+  }
+};

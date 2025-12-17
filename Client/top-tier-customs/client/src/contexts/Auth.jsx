@@ -97,6 +97,21 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const updateSettings = async (settings) => {
+    try {
+      const res = await api.put("/api/auth/update-settings", { settings });
+      console.log("<updateSettings()> --> res:", res);
+
+      if (res.status === 204) {
+        alert("Settings updated successfully!");
+      } else {
+        alert("Failed to update settings.");
+      }
+    } catch (e) {
+      console.error("Failed to update user settings:", e.message);
+    }
+  };
+
   const value = {
     user,
     accessToken,
@@ -105,6 +120,7 @@ export const AuthProvider = ({ children }) => {
     login,
     logout,
     resetPassword,
+    updateSettings,
     isAuthenticated: status === "authenticated" && !!user,
   };
 

@@ -20,6 +20,7 @@ import {
   Mail,
   Phone,
   Home,
+  LogOutIcon,
 } from "lucide-react";
 import { useTheme } from "../../contexts/Theme";
 import { useAuth } from "../../contexts/Auth";
@@ -191,12 +192,12 @@ export default function Dashboard() {
     confirmNewPassword: "",
   });
 
-  const { user, resetPassword, logout } = useAuth();
+  const { user, resetPassword, updateSettings, logout } = useAuth();
 
   const [notificationsSettings, setNotificationsSettings] = useState({
-    orderUpdates: user.settings.notifications.order_updates,
-    bookingReminders: user.settings.notifications.booking_reminders,
-    promotionalOffers: user.settings.notifications.promotions,
+    orderUpdates: user.settings.notifications.order_updates || false,
+    bookingReminders: user.settings.notifications.booking_reminders || false,
+    promotionalOffers: user.settings.notifications.promotions || false,
   });
 
   const handleChange = (e) => {
@@ -231,8 +232,24 @@ export default function Dashboard() {
 
     setIsEditingProfile(true);
 
+    const settings = {
+      notifications: {
+        order_updates:
+          notificationsSettings.orderUpdates ||
+          user.settings.notifications.order_updates,
+        booking_reminders:
+          notificationsSettings.bookingReminders ||
+          user.settings.notifications.booking_reminders,
+        promotions:
+          notificationsSettings.promotionalOffers ||
+          user.settings.notifications.promotions,
+      },
+    };
+
+    console.log("settings from dashboard:", settings);
+
     try {
-      //
+      await updateSettings(settings);
     } catch (e) {
       console.log("<Dashboard.jsx> Error in handleSaveNotifications():", e);
     } finally {
@@ -374,6 +391,14 @@ export default function Dashboard() {
                 >
                   Customer since {new Date(user.createdAt).getFullYear()}
                 </div>
+                <button
+                  onClick={logout}
+                  className={`${
+                    isDark ? "text-rose-500" : ""
+                  } mx-auto mt-4 text-center flex items-center gap-2 font-bold cursor-pointer transition-all duration-1000`}
+                >
+                  Logout <LogOutIcon />
+                </button>
               </div>
             </div>
             {/* Sidebar Nav */}
@@ -1181,6 +1206,7 @@ export default function Dashboard() {
                         <input
                           type="checkbox"
                           className="sr-only peer"
+                          value={notificationsSettings.orderUpdates}
                           checked={notificationsSettings.orderUpdates}
                           onChange={() => {
                             setNotificationsSettings({
@@ -1208,6 +1234,7 @@ export default function Dashboard() {
                         <input
                           type="checkbox"
                           className="sr-only peer"
+                          value={notificationsSettings.bookingReminders}
                           checked={notificationsSettings.bookingReminders}
                           onChange={() => {
                             setNotificationsSettings({
@@ -1236,6 +1263,7 @@ export default function Dashboard() {
                         <input
                           type="checkbox"
                           className="sr-only peer"
+                          value={notificationsSettings.promotionalOffers}
                           checked={notificationsSettings.promotionalOffers}
                           onChange={() => {
                             setNotificationsSettings({
@@ -1250,6 +1278,7 @@ export default function Dashboard() {
                     {/* Update Notifications Button */}
                     <button
                       // onClick={handlePasswordReset}
+                      onClick={handleSaveNotifications}
                       disabled={isEditingProfile}
                       className="w-full bg-red-600 hover:bg-red-700 py-3 rounded-lg font-bold transition-all hover:scale-105"
                     >
